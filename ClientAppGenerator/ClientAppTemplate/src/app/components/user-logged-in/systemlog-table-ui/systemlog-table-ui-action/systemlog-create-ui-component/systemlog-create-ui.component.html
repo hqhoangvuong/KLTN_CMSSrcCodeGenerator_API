@@ -1,0 +1,102 @@
+<div class="create__entity">
+  <mat-card
+    class="mt-4 mr-4"
+    [ngClass]="{
+      'card--black': isDarkThemeSubscription === true
+    }"
+  >
+    <h2 class="create__entity__h2"> Create new SystemLog </h2>
+  </mat-card>
+  <hr [ngClass]="{ 'hr--white': isDarkThemeSubscription === true }" />
+  <mat-card
+    class="mr-4"
+    [ngClass]="{
+      'card--black': isDarkThemeSubscription === true
+    }"
+  >
+    <div class="create__entity__content mr-2">
+
+      <div class="row" style="margin-bottom: 30px">
+        <div class="col-6">
+          <div class="row">
+            <p class="col-12">username</p>
+            <select class="create__input col-11 ml-3" id="ddlUsername" [(ngModel)]="item.username" [ngClass]="{ 'create__input__text--white': isDarkThemeSubscription === true }" required>
+              <option *ngFor="let item of accountItems; let i = index" [value]="accountItems[i].userName">
+                {{ accountItems[i].userName }}
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="row">
+            <p class="col-12">displayname</p>
+            <input
+              class="create__input col-11 ml-3"
+              [ngClass]="{
+                'create__input__text--white': isDarkThemeSubscription === true
+              }"
+              [(ngModel)]="item.displayname"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="row" style="margin-bottom: 30px">
+        <div class="col-6">
+          <div class="row">
+            <p class="col-12">Type</p>
+            <input
+              class="create__input col-11 ml-3"
+              [ngClass]="{
+                'create__input__text--white': isDarkThemeSubscription === true
+              }"
+              [(ngModel)]="item.type"
+            />
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="row">
+            <p class="col-12">datelogin</p>
+            <input
+              class="create__input col-11 ml-3"
+              [ngClass]="{
+                'create__input__text--white': isDarkThemeSubscription === true
+              }"
+              [(ngModel)]="item.datelogin"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="row" style="margin-bottom: 30px">
+        <div class="col-6">
+          <div class="row">
+            <p class="col-12">datelogout</p>
+            <input
+              class="create__input col-11 ml-3"
+              [ngClass]="{
+                'create__input__text--white': isDarkThemeSubscription === true
+              }"
+              [(ngModel)]="item.datelogout"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <mat-checkbox class="checkbox-margin" [(ngModel)]="isContinueToCreate">Continue to create</mat-checkbox>
+    </div>
+    <div class="mt-4 mb-3">
+      <button class="btn btn-success" (click)="createNewItem()">
+        <i class="fas fa-check"></i>Submit
+      </button>
+      <button 
+        class="btn btn-secondary" 
+        [routerLink]="['/user/index/systemlogmanagement']" 
+        routerLinkActive="router-link-active" 
+      >
+        <i class="fas fa-check"></i>Back
+      </button>
+    </div>
+  </mat-card>
+</div>

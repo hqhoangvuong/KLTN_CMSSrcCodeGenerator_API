@@ -1,0 +1,139 @@
+<div class="register__container">
+    <div class="row d-flex flex-row-reverse bd-highlight mt-2 ml-2 mr-1">
+      <div class="col-5">
+        <div class="row d-flex mb-3">
+          <div class="col-8 d-flex">
+            <img src="../../../../assets/images/BussinessLogo.png" width="30%" />
+            <p class="ml-3 d-flex h2 mt-5">[--BussinessName--]</p>
+          </div>
+          <div class="col-4 align-items-center">
+            <button
+              class="btn btn-outline-secondary float-right mt-5 px-5"
+              [routerLink]="['/login']"
+              routerLinkActive="router-link-active"
+            >
+              Login
+            </button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="row mb-2">
+              <div class="col-12">
+                <h4><b>Register</b></h4>
+              </div>
+            </div>
+            <p class="text-secondary title__input"><b>User name</b></p>
+            <div class="input-group mb-3">
+              <input
+                type="text"
+                class="form-control"
+                aria-label="Default"
+                aria-describedby="inputGroup-sizing-default"
+                [(ngModel)]="userName"
+              />
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <p class="text-secondary title__input"><b>First name</b></p>
+                <div class="input-group mb-3">
+                  <input
+                    class="form-control"
+                    aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default"
+                    [(ngModel)]="firstName"
+                  />
+                </div>
+              </div>
+              <div class="col-6">
+                <p class="text-secondary title__input"><b>Last name</b></p>
+                <div class="input-group mb-3">
+                  <input
+                    class="form-control"
+                    aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default"
+                    [(ngModel)]="lastName"
+                  />
+                </div>
+              </div>
+            </div>
+            <p class="text-secondary title__input"><b>Email</b></p>
+            <div class="input-group mb-3">
+              <input
+                type="text"
+                class="form-control"
+                aria-label="Default"
+                aria-describedby="inputGroup-sizing-default"
+                [(ngModel)]="email"
+              />
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <p class="text-secondary title__input"><b>Password</b></p>
+                <div class="input-group mb-3">
+                  <input
+                    [type]="show ? 'text' : 'password'"
+                    class="form-control"
+                    aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default"
+                    [(ngModel)]="password"
+                  />
+                  <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="col-6">
+                <p class="text-secondary title__input"><b>Confirm password</b></p>
+                <div class="input-group mb-3">
+                  <input
+                    type="password"
+                    class="form-control"
+                    aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <p class="text-secondary title__input"><b>Phone number</b></p>
+                <div class="input-group mb-3">
+                  <input
+                    type="number"
+                    min="0"
+                    maxlength="12"
+                    class="form-control"
+                    aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default"
+                    [(ngModel)]="phoneNumber"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 mb-2">
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="exampleCheck1"
+                  />
+                  <label class="form-check-label" for="exampleCheck1"
+                    >I agree with the terms and conditions.</label
+                  >
+                </div>
+              </div>
+            </div>
+  
+            <button
+              type="submit"
+              class="btn btn-primary btn__submit col-12 mt-4"
+              (click)="onRegisterUser()"
+            >
+              CREATE
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

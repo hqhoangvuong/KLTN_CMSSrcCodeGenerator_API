@@ -1,0 +1,84 @@
+<div class="read__entity">
+  <mat-card
+    class="mt-4 mr-4"
+    [ngClass]="{
+      'card--black': isDarkThemeSubscription === true
+    }"
+  >
+    <h2 class="read__entity__h2">View customers_edited</h2>
+  </mat-card>
+  <hr [ngClass]="{ 'hr--white': isDarkThemeSubscription === true }"/>
+  <mat-card
+    class="mt-4 mr-4"
+    [ngClass]="{
+      'card--black': isDarkThemeSubscription === true
+    }"
+  >
+    <div class="read__entity__content">
+
+      <div class="row" style="margin-bottom: 30px">
+        <div class="col-6">
+          <p class="col-11">UserName</p>
+          <input
+            class="read__input col-11 ml-3"
+            readonly
+            [ngClass]="{
+              'read__input__text--white': isDarkThemeSubscription === true
+            }"
+            [(ngModel)]="item.userName"
+          />
+        </div>
+        <div class="col-6">
+          <p class="col-11">DisplayName</p>
+          <input
+            class="read__input col-11 ml-3"
+            readonly
+            [ngClass]="{
+              'read__input__text--white': isDarkThemeSubscription === true
+            }"
+            [(ngModel)]="item.displayName"
+          />
+        </div>
+      </div>
+
+      <div class="row" style="margin-bottom: 30px">
+        <div class="col-6">
+          <p class="col-11">PassWord</p>
+          <input
+            class="read__input col-11 ml-3"
+            readonly
+            [ngClass]="{
+              'read__input__text--white': isDarkThemeSubscription === true
+            }"
+            [(ngModel)]="item.passWord"
+          />
+        </div>
+        <div class="col-6">
+          <p class="col-11">Type</p>
+          <input
+            class="read__input col-11 ml-3"
+            readonly
+            [ngClass]="{
+              'read__input__text--white': isDarkThemeSubscription === true
+            }"
+            [(ngModel)]="item.type"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="mt-3 mb-3">
+      <button class="btn btn-success ml-3 mr-2" (click)="createNewAccount()">
+        <i class="fas fa-check"></i>Submit
+      </button>
+      <button
+        class="btn btn-secondary"
+        [routerLink]="['/user/index/accountmanagement']"
+        routerLinkActive="router-link-active"
+      >
+        <i class="fas fa-check"></i>Back
+      </button>
+    </div>
+  </mat-card>
+
+</div>
+  

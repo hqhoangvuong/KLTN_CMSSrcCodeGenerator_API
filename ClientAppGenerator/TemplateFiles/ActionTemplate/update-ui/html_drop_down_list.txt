@@ -1,0 +1,19 @@
+        <div class="col-6">
+          <div class="row">
+            <p class="col-11">[--DisplayName--]</p>
+            <select 
+              class="update__input ml-3" 
+              id="ddl[--ColumnPropertyName--]" 
+              [(ngModel)] = "item.[--ColumnPropertyNameLowerFirst--]" 
+              [ngClass] = "{ 'update__input__text--white': isDarkThemeSubscription === true 
+              }" 
+              required
+            >
+              <option 
+                *ngFor="let item of [--FKItems--]; let i = index" [value]="[--FKItems--][i].[--RefrencedColumnNameLowerFirst--]"
+              >
+                {{ [--FKItems--][i].[--MappedRefrencedColumnNameLowerFirst--] }}
+              </option>
+            </select>
+          </div>
+        </div>

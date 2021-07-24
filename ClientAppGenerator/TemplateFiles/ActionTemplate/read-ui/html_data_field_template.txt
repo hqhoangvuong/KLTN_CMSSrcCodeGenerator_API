@@ -1,0 +1,11 @@
+        <div class="col-6">
+          <p class="col-11">[--DisplayName--]</p>
+          <input
+            class="read__input col-11 ml-3"
+            readonly
+            [ngClass]="{
+              'read__input__text--white': isDarkThemeSubscription === true
+            }"
+            [(ngModel)]="item.[--ModelNameWithLower--]"
+          />
+        </div>

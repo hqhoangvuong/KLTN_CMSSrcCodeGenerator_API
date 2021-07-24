@@ -1,0 +1,104 @@
+<div class="create__entity">
+  <mat-card
+    class="mt-4 mr-4"
+    [ngClass]="{
+      'card--black': isDarkThemeSubscription === true
+    }"
+  >
+    <h2 class="create__entity__h2"> Create new customers_edited </h2>
+  </mat-card>
+  <hr [ngClass]="{ 'hr--white': isDarkThemeSubscription === true }" />
+  <mat-card
+    class="mr-4"
+    [ngClass]="{
+      'card--black': isDarkThemeSubscription === true
+    }"
+  >
+    <div class="create__entity__content mr-2">
+
+      <div class="row" style="margin-bottom: 30px">
+        <div class="col-6">
+          <div class="row">
+            <p class="col-12">UserName</p>
+            <input
+              class="create__input col-11 ml-3"
+              [ngClass]="{
+                'create__input__text--white': isDarkThemeSubscription === true
+              }"
+              [(ngModel)]="item.userName"
+            />
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="row">
+            <p class="col-12">DisplayName</p>
+            <input
+              class="create__input col-11 ml-3"
+              [ngClass]="{
+                'create__input__text--white': isDarkThemeSubscription === true
+              }"
+              [(ngModel)]="item.displayName"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="row" style="margin-bottom: 30px">
+        <div class="col-6">
+          <div class="row">
+            <p class="col-12">PassWord</p>
+            <input
+              class="create__input col-11 ml-3"
+              [ngClass]="{
+                'create__input__text--white': isDarkThemeSubscription === true
+              }"
+              [(ngModel)]="item.passWord"
+            />
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="row">
+            <p class="col-12">Type</p>
+            <input
+              class="create__input col-11 ml-3"
+              [ngClass]="{
+                'create__input__text--white': isDarkThemeSubscription === true
+              }"
+              [(ngModel)]="item.type"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="row" style="margin-bottom: 30px">
+        <div class="col-6">
+          <div class="row">
+            <p class="col-12">isdelete</p>
+            <input
+              class="create__input col-11 ml-3"
+              [ngClass]="{
+                'create__input__text--white': isDarkThemeSubscription === true
+              }"
+              [(ngModel)]="item.isdelete"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <mat-checkbox class="checkbox-margin" [(ngModel)]="isContinueToCreate">Continue to create</mat-checkbox>
+    </div>
+    <div class="mt-4 mb-3">
+      <button class="btn btn-success" (click)="createNewItem()">
+        <i class="fas fa-check"></i>Submit
+      </button>
+      <button 
+        class="btn btn-secondary" 
+        [routerLink]="['/user/index/accountmanagement']" 
+        routerLinkActive="router-link-active" 
+      >
+        <i class="fas fa-check"></i>Back
+      </button>
+    </div>
+  </mat-card>
+</div>

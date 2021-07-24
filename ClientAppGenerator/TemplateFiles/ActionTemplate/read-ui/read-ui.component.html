@@ -1,0 +1,35 @@
+<div class="read__entity">
+  <mat-card
+    class="mt-4 mr-4"
+    [ngClass]="{
+      'card--black': isDarkThemeSubscription === true
+    }"
+  >
+    <h2 class="read__entity__h2">View [--ExceplitName--]</h2>
+  </mat-card>
+  <hr [ngClass]="{ 'hr--white': isDarkThemeSubscription === true }"/>
+  <mat-card
+    class="mt-4 mr-4"
+    [ngClass]="{
+      'card--black': isDarkThemeSubscription === true
+    }"
+  >
+    <div class="read__entity__content">
+[--InsertHere--]
+    </div>
+    <div class="mt-3 mb-3">
+      <button class="btn btn-success ml-3 mr-2" (click)="createNewAccount()">
+        <i class="fas fa-check"></i>Submit
+      </button>
+      <button
+        class="btn btn-secondary"
+        [routerLink]="['/user/index/[--LowerModelName--]management']"
+        routerLinkActive="router-link-active"
+      >
+        <i class="fas fa-check"></i>Back
+      </button>
+    </div>
+  </mat-card>
+
+</div>
+  

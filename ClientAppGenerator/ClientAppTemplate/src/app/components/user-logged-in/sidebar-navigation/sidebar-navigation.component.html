@@ -1,0 +1,74 @@
+<!-- <div
+  class="navigation"
+  [ngClass]="{ 'navigation--dark': isDarkThemeSubscription === true }"
+>
+  <p
+    class="title__navigation__cms"
+    [ngClass]="{ 'title--navigation--dark': isDarkThemeSubscription === true }"
+  >
+    <b>QLCF</b>
+    <br/>
+    <br/>
+    <b>ADMIN CMS</b>
+  </p>
+
+  <div
+    class="navigation__container"
+    [ngClass]="{
+      'navigtaion--container--dark': isDarkThemeSubscription === true
+    }"
+  >
+    <button class="button button__upgrade">Upgrade to Pro!</button>
+    <ul class="navigation__ul">
+      <li
+        *ngFor="let item of listNavMenuItems"
+        routerLinkActive="router-link-active"
+      >
+        <button
+          class="button button-navigation"
+          [routerLink]="['index', item.routingPath]"
+          routerLinkActive="router-link-active"
+        >
+          <p>{{ item.displayName }}</p>
+        </button>
+      </li>
+    </ul>
+  </div>
+</div> -->
+
+<div
+  class="navigation"
+  [ngClass]="{ 'navigation--dark': isDarkThemeSubscription === true }"
+>
+
+  <mat-card
+    class="mt-2"
+    [ngClass]="{
+      'card--black': isDarkThemeSubscription === true
+    }"
+  >
+    <ul
+      class="list-group"
+      [ngClass]="{
+        'list-card--black': isDarkThemeSubscription === true
+      }"
+    >
+      <li
+        class="list-group-item"
+        [ngClass]="{ 'li--item': isDarkThemeSubscription === true }"
+        [routerLink]="['index', item.routingPath]"
+        (click) = "closeNavDrawer()"
+        routerLinkActive="router-link-active"
+        *ngFor="let item of listNavMenuItems"
+      >
+        <i class="fas fa-folder mr-4"></i> {{ item.displayName }}
+      </li>
+      <li
+        class="list-group-item"
+        [ngClass]="{ 'li--item': isDarkThemeSubscription === true }"
+      >
+        <i class="fas fa-plus-circle mr-4"></i>Add more entity
+      </li>
+    </ul>
+  </mat-card>
+</div>

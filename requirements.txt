@@ -1,0 +1,9 @@
+inflect==5.3.0
+filestack_python==3.4.0
+Flask==2.0.1
+pymssql==2.2.1
+rq==1.8.1
+redis==3.5.3
+psycopg2_binary==2.8.6
+GitPython==3.1.17
+mysql_connector_repackaged==0.3.1

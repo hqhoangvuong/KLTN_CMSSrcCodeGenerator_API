@@ -1,0 +1,10 @@
+        <div class="col-6">
+          <div class="row">
+            <p class="col-12">[--DisplayName--]</p>
+            <select class="create__input col-11 ml-3" id="ddl[--ColumnPropertyName--]" [(ngModel)]="item.[--ColumnPropertyNameLowerFirst--]" [ngClass]="{ 'create__input__text--white': isDarkThemeSubscription === true }" required>
+              <option *ngFor="let item of [--FKItems--]; let i = index" [value]="[--FKItems--][i].[--RefrencedColumnNameLowerFirst--]">
+                {{ [--FKItems--][i].[--MappedRefrencedColumnNameLowerFirst--] }}
+              </option>
+            </select>
+          </div>
+        </div>

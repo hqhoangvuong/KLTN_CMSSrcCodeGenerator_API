@@ -1,0 +1,33 @@
+<div class="create__entity">
+  <mat-card
+    class="mt-4 mr-4"
+    [ngClass]="{
+      'card--black': isDarkThemeSubscription === true
+    }"
+  >
+    <h2 class="create__entity__h2">Edit [--ExceplitName--]'s Item</h2>
+  </mat-card>
+  <hr [ngClass]="{ 'hr--white': isDarkThemeSubscription === true }" />
+  <mat-card
+    class="mr-4"
+    [ngClass]="{
+      'card--black': isDarkThemeSubscription === true
+    }"
+  >
+    <div class="create__entity__content">
+[--InsertHere--]
+    </div>
+    <div class="mt-3 mb-3 ml-3">
+      <button class="btn btn-success" (click)="onUpdateItem()">
+        <i class="fas fa-check"></i>Update
+      </button>
+      <button
+        class="btn btn-secondary ml-2"
+        [routerLink]="['/user/index/[--LowerModelName--]management']"
+        routerLinkActive="router-link-active"
+      >
+        <i class="fas fa-check"></i>Back
+      </button>
+    </div>
+  </mat-card>
+</div>

@@ -1,0 +1,134 @@
+<div class="client-cms-generated-container cms--generated--dark">
+  <mat-drawer-container class="nav-container">
+    <mat-drawer
+      #drawer
+      class="sidenav"
+      [ngClass]="{
+        'button--switch--dark': isDarkThemeSubscription === true
+      }"
+      mode="over"
+      closed
+    >
+      <mat-card
+        class="d-flex btn-toggle__container pb-3 mr-3 ml-3"
+        [ngClass]="{
+          'card--black': isDarkThemeSubscription === true
+        }"
+      >
+        <button
+          class="btn btn-primary float-right ml-3"
+          type="button"
+          (click)="drawer.toggle()"
+        >
+          <i class="fas fa-chevron-left mr-2"></i>
+          <span>Back</span>
+        </button>
+
+        <div class="user__information">
+          <button mat-button [matMenuTriggerFor]="menu">
+            <img src="../../../assets/images/user.png" class="user__logo" />
+          </button>
+          <mat-menu #menu="matMenu" xPosition="after">
+            <mat-slide-toggle
+              (click)="switchMode()"
+              class="toggle__slide"
+              [formControl]="ctrl"
+            >
+              <span *ngIf="isDarkMode" class="dark--mode--span"
+                >Mode: Light</span
+              >
+              <span *ngIf="!isDarkMode" class="light--mode--span"
+                >Mode: Dark</span
+              >
+            </mat-slide-toggle>
+            <hr />
+            <button
+              mat-menu-item
+              [routerLink]="['/user/information']"
+              routerLinkActive="router-link-active"
+            >
+              <mat-icon>info</mat-icon> Information
+            </button>
+            <button
+              mat-menu-item
+              [routerLink]="['/login']"
+              routerLinkActive="router-link-active"
+            >
+              <mat-icon>exit_to_app</mat-icon> Logout
+            </button>
+          </mat-menu>
+        </div>
+      </mat-card>
+      <div class="client-cms-generated-navigation">
+        <app-sidebar-navigation (isChoosedEntity)="drawer.toggle()"></app-sidebar-navigation>
+      </div>
+    </mat-drawer>
+
+    <mat-drawer-content>
+      <div
+        class="client-cms-generated-crud-container"
+        [ngClass]="{ 'button--switch--dark': isDarkThemeSubscription == true }"
+      >
+        <mat-card
+          class="ml-3 mr-4 d-flex"
+          [ngClass]="{
+            'card--black': isDarkThemeSubscription === true
+          }"
+        >
+          <button
+            flexDirection="row-reverse"
+            class="btn btn-primary"
+            type="button"
+            (click)="drawer.toggle()"
+          >
+            <i class="fas fa-bars mr-2"></i>
+            <span>Menu</span>
+          </button>
+
+          <div class="user__information">
+            <button mat-button [matMenuTriggerFor]="menu">
+              <img src="../../../assets/images/user.png" class="user__logo" />
+            </button>
+            <mat-menu #menu="matMenu" xPosition="after">
+              <mat-slide-toggle
+                (click)="switchMode()"
+                class="toggle__slide"
+                [formControl]="ctrl"
+              >
+                <span *ngIf="isDarkMode" class="dark--mode--span"
+                  >Mode: Light</span
+                >
+                <span *ngIf="!isDarkMode" class="light--mode--span"
+                  >Mode: Dark</span
+                >
+              </mat-slide-toggle>
+              <hr />
+              <button
+                mat-menu-item
+                [routerLink]="['/user/information']"
+                routerLinkActive="router-link-active"
+              >
+                <mat-icon>info</mat-icon> Information
+              </button>
+              <button
+                mat-menu-item
+                [routerLink]="['/login']"
+                routerLinkActive="router-link-active"
+              >
+                <mat-icon>exit_to_app</mat-icon> Logout
+              </button>
+            </mat-menu>
+          </div>
+        </mat-card>
+        <div
+          class="client-cms-generated-crud-container--content col-12"
+          [ngClass]="{
+            'container--content--dark': isDarkThemeSubscription == true
+          }"
+        >
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </mat-drawer-content>
+  </mat-drawer-container>
+</div>

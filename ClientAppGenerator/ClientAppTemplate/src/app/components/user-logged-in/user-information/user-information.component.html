@@ -1,0 +1,52 @@
+<mat-card
+  class="user__information mt-3 mr-3"
+  [ngClass]="{
+    'card--black': isDarkThemeSubscription === true
+  }"
+>
+  <h2>Information</h2>
+  <div class="create__entity__content">
+    <div class="group-display__information col-6">
+      <label for="input__username">User Name</label>
+      <input
+        class="create__input form-control"
+        id="input__username"
+        [ngClass]="{
+          'create__input__text--white': isDarkThemeSubscription === true
+        }"
+      />
+    </div>
+    <div class="group-display__information col-6">
+      <label for="input__password">Password</label>
+      <input
+        class="create__input form-control"
+        type="password"
+        id="input__password"
+        [ngClass]="{
+          'create__input__text--white': isDarkThemeSubscription === true
+        }"
+      />
+    </div>
+    <div class="group-display__information col-6">
+      <label for="input_displayname">Display Name</label>
+      <input
+        class="create__input form-control"
+        type="text"
+        id="input_displayname"
+        [ngClass]="{
+          'create__input__text--white': isDarkThemeSubscription === true
+        }"
+      />
+    </div>
+  </div>
+  <div class="group__bottons col-6">
+    <button class="btn btn-success"><i class="fas fa-check"></i>Submit</button>
+    <button
+      class="btn btn-secondary"
+      [routerLink]="['/user']"
+      routerLinkActive="router-link-active"
+    >
+      <i class="fas fa-check"></i>Back
+    </button>
+  </div>
+</mat-card>

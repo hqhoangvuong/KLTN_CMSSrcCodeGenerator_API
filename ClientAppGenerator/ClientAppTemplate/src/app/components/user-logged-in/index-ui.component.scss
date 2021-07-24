@@ -1,0 +1,142 @@
+@import "../../style-service/global-mode.scss";
+
+.mat-drawer-container {
+  width: 100%;
+}
+
+.sidenav {
+  height: 100%;
+}
+
+.nav-container {
+  height: 100%;
+}
+
+.client-cms-generated-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow-y: hidden;
+  position: fixed;
+
+  .client-cms-generated-crud-container {
+    width: 100%;
+    height: 57em;
+    padding-top: 0px;
+    margin-top: 0px;
+
+    .client-cms-generated-crud-container--content {
+      display: block;
+      height: 100%;
+    }
+
+    .container--content--dark {
+      background-color: $lightColorBackground_Dark_Secondary;
+      color: white;
+      height: 100%;
+    }
+
+    .light--mode--span {
+      color: white;
+    }
+
+    .dark--mode--span {
+      color: black;
+    }
+  }
+
+  .button--switch--dark {
+    background-color: $lightColorBackground_Dark_Secondary;
+  }
+
+  .user__information {
+    margin-left: auto;
+    margin-right: 0;
+    width: 5em;
+    height: auto;
+  }
+
+  .user__logo {
+    width: 100%;
+  }
+}
+
+.card--black {
+  background-color: #25313a;
+  color: white;
+}
+
+::ng-deep .mat-slide-toggle-label {
+  margin-right: 11px;
+}
+
+::ng-deep .mat-slide-toggle.mat-checked .mat-slide-toggle-bar {
+  background-color: rgb(207, 204, 204);
+}
+
+::ng-deep .mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
+  background-color: aliceblue;
+}
+
+::ng-deep .mat-slide-toggle-label {
+  position: absolute;
+  right: 0px;
+}
+
+.generate__table__container {
+  height: 100%;
+}
+
+.button {
+  height: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 10px;
+  border-width: 1px;
+  border-color: $lightColorBackground_Dark_Primary;
+  background-color: $lightColorBackground_Dark_Primary;
+  color: white;
+  transition: background-color 0.5s ease;
+}
+
+.fas {
+  margin-right: 5px;
+}
+
+.button:hover {
+  background-color: $lightColorBackground_Dark_Primary;
+  color: $lightColorBackground_Dark_Primary;
+  border-width: 1px;
+  border-color: $lightColorBackground_Dark_Primary;
+}
+
+.hr--white {
+  border-color: white;
+}
+
+::ng-deep .mat-drawer {
+  width: 100%;
+}
+
+.client-cms-generated-navigation {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  .client-cms-generated-container {
+    .client-cms-generated-crud-container {
+      width: 100%;
+      height: 57em;
+    }
+  }
+}
+
+@media screen and (min-width: 1480px) {
+  .client-cms-generated-container {
+    .client-cms-generated-crud-container {
+      width: 100%;
+      height: 63em;
+    }
+  }
+}

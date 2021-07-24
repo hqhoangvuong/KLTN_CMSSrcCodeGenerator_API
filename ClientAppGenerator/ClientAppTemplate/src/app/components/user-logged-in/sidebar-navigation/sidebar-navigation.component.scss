@@ -1,0 +1,23 @@
+@import "../../../style-service/global-mode.scss";
+.card--black {
+  background-color: #25313a;
+  color: white;
+}
+.list-card--black {
+  background-color: #25313a;
+  color: black;
+}
+.navigation--dark {
+  // background-color: $lightColorBackground_Dark_Secondary;
+  height: 100%;
+}
+
+.list-group-item:hover {
+  background-color: gray;
+  color: white;
+  cursor: pointer;
+}
+.li--item {
+  background-color: #25313a;
+  color: white;
+}

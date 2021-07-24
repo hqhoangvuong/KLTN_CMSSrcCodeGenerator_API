@@ -1,0 +1,109 @@
+<div class="read__entity">
+  <mat-card
+    class="mt-4 mr-4"
+    [ngClass]="{
+      'card--black': isDarkThemeSubscription === true
+    }"
+  >
+    <h2 class="read__entity__h2">View Bill Information Management</h2>
+  </mat-card>
+  <hr [ngClass]="{ 'hr--white': isDarkThemeSubscription === true }"/>
+  <mat-card
+    class="mt-4 mr-4"
+    [ngClass]="{
+      'card--black': isDarkThemeSubscription === true
+    }"
+  >
+    <div class="read__entity__content">
+
+      <div class="row" style="margin-bottom: 30px">
+        <div class="col-6">
+          <p class="col-11">id</p>
+          <input
+            class="read__input col-11 ml-3"
+            readonly
+            [ngClass]="{
+              'read__input__text--white': isDarkThemeSubscription === true
+            }"
+            [(ngModel)]="item.id"
+          />
+        </div>
+        <div class="col-6">
+          <p class="col-11">DateCheckIn</p>
+          <input
+            class="read__input col-11 ml-3"
+            readonly
+            [ngClass]="{
+              'read__input__text--white': isDarkThemeSubscription === true
+            }"
+            [(ngModel)]="item.dateCheckIn"
+          />
+        </div>
+      </div>
+
+      <div class="row" style="margin-bottom: 30px">
+        <div class="col-6">
+          <p class="col-11">DateCheckOut</p>
+          <input
+            class="read__input col-11 ml-3"
+            readonly
+            [ngClass]="{
+              'read__input__text--white': isDarkThemeSubscription === true
+            }"
+            [(ngModel)]="item.dateCheckOut"
+          />
+        </div>
+        <div class="col-6">
+          <p class="col-11">idTable</p>
+          <input
+            class="read__input col-11 ml-3"
+            readonly
+            [ngClass]="{
+              'read__input__text--white': isDarkThemeSubscription === true
+            }"
+            [(ngModel)]="item.idTable"
+          />
+        </div>
+      </div>
+
+      <div class="row" style="margin-bottom: 30px">
+        <div class="col-6">
+          <p class="col-11">status</p>
+          <input
+            class="read__input col-11 ml-3"
+            readonly
+            [ngClass]="{
+              'read__input__text--white': isDarkThemeSubscription === true
+            }"
+            [(ngModel)]="item.status"
+          />
+        </div>
+        <div class="col-6">
+          <p class="col-11">totalprice</p>
+          <input
+            class="read__input col-11 ml-3"
+            readonly
+            [ngClass]="{
+              'read__input__text--white': isDarkThemeSubscription === true
+            }"
+            [(ngModel)]="item.totalprice"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="mt-3 mb-3">
+      <button class="btn btn-success ml-3 mr-2" (click)="createNewAccount()">
+        <i class="fas fa-check"></i>Submit
+      </button>
+      <button
+        class="btn btn-secondary"
+        [routerLink]="['/user/index/billmanagement']"
+        routerLinkActive="router-link-active"
+      >
+        <i class="fas fa-check"></i>Back
+      </button>
+    </div>
+  </mat-card>
+
+</div>
+  

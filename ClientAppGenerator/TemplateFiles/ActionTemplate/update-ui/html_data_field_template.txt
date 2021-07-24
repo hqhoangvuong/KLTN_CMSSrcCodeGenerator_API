@@ -1,0 +1,13 @@
+        <div class="col-6">
+          <p class="col-11">[--DisplayName--]</p>
+          <input
+            class="update__input ml-3"
+            [--DisableIfPrimaryKey--]
+            [ngClass]="{
+              'update__input__text--white': isDarkThemeSubscription === true
+            }"
+            [(ngModel)]="item.[--ModelNameWithLower--]"
+          />
+        </div>
+
+      

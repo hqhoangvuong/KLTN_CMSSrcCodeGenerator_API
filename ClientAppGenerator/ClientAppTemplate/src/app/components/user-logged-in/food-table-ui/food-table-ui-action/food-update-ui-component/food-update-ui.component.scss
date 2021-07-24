@@ -1,0 +1,52 @@
+@import "../../../../../style-service/global-mode.scss";
+.create__entity {
+    width: 100%;
+    height: 100vh;
+}
+.create__entity__h2 {
+    margin-bottom: 1em;
+}
+.create__entity__content {
+    width: 100%;
+    margin-bottom: 2em;
+}
+.fas {
+    margin-right: 5px;
+}
+.create__entity__h2--white {
+    color: white;
+}
+.update__input {
+    width: 100%;
+    border-radius: 8px;
+    border-width: 1px;
+    border-style: solid;
+    height: 3em;
+    font-size: 15px;
+}
+.update__input:disabled {
+    color: black;
+}
+.btn {
+    margin-top: 1em;
+}
+.hr--white {
+    border-color: white;
+}
+.update__input__text--white:disabled {
+    color: rgb(192, 187, 187);
+}
+
+.input--center {
+    text-align: center;
+    border-radius: 8px;
+    border-width: 1px;
+    border-style: solid;
+    height: 3em;
+    font-size: 15px;
+    width: 2em;
+}
+.card--black {
+    background-color: #25313a;
+    color: white;
+}

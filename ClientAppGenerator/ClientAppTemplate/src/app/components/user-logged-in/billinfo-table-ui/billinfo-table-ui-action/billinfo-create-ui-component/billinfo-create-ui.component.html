@@ -1,0 +1,73 @@
+<div class="create__entity">
+  <mat-card
+    class="mt-4 mr-4"
+    [ngClass]="{
+      'card--black': isDarkThemeSubscription === true
+    }"
+  >
+    <h2 class="create__entity__h2"> Create new Bill Info  </h2>
+  </mat-card>
+  <hr [ngClass]="{ 'hr--white': isDarkThemeSubscription === true }" />
+  <mat-card
+    class="mr-4"
+    [ngClass]="{
+      'card--black': isDarkThemeSubscription === true
+    }"
+  >
+    <div class="create__entity__content mr-2">
+
+      <div class="row" style="margin-bottom: 30px">
+        <div class="col-6">
+          <div class="row">
+            <p class="col-12">idBill</p>
+            <select class="create__input col-11 ml-3" id="ddlIdBill" [(ngModel)]="item.idBill" [ngClass]="{ 'create__input__text--white': isDarkThemeSubscription === true }" required>
+              <option *ngFor="let item of billItems; let i = index" [value]="billItems[i].id">
+                {{ billItems[i].id }}
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="row">
+            <p class="col-12">idFood</p>
+            <select class="create__input col-11 ml-3" id="ddlIdFood" [(ngModel)]="item.idFood" [ngClass]="{ 'create__input__text--white': isDarkThemeSubscription === true }" required>
+              <option *ngFor="let item of foodItems; let i = index" [value]="foodItems[i].id">
+                {{ foodItems[i].id }}
+              </option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" style="margin-bottom: 30px">
+        <div class="col-6">
+          <div class="row">
+            <p class="col-12">count</p>
+            <input
+              class="create__input col-11 ml-3"
+              [ngClass]="{
+                'create__input__text--white': isDarkThemeSubscription === true
+              }"
+              [(ngModel)]="item.count"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <mat-checkbox class="checkbox-margin" [(ngModel)]="isContinueToCreate">Continue to create</mat-checkbox>
+    </div>
+    <div class="mt-4 mb-3">
+      <button class="btn btn-success" (click)="createNewItem()">
+        <i class="fas fa-check"></i>Submit
+      </button>
+      <button 
+        class="btn btn-secondary" 
+        [routerLink]="['/user/index/billinfomanagement']" 
+        routerLinkActive="router-link-active" 
+      >
+        <i class="fas fa-check"></i>Back
+      </button>
+    </div>
+  </mat-card>
+</div>

@@ -1,0 +1,21 @@
+@import "../../../style-service/global-mode.scss";
+
+.search__bar__container{
+    width: 80%;
+    padding-bottom: 3em;
+}
+.search__bar{
+    margin-top: 1.5%;
+    width: 100%;
+    display: flex;
+}
+.search__bar__input{
+    width: 80%;
+    border-radius: 15px 15px 15px 15px;
+    height: 40px;
+    border-color: $lightColorBackground_Dark_Primary;
+    border-width: 1px;
+}
+.search__bar__input:focus{
+    outline: none;
+}

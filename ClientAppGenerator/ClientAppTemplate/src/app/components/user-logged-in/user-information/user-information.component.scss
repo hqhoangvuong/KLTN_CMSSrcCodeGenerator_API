@@ -1,0 +1,26 @@
+@import "../../../style-service/global-mode.scss";
+
+.user__information {
+  background-color: white;
+}
+.user__information--white {
+  background-color: $lightColorBackground_Dark_Primary;
+  color: white;
+}
+.group-display__information {
+  margin-bottom: 2em;
+}
+.group__bottons {
+  margin-bottom: 2em;
+}
+
+.create__input__text--white {
+  border-color: rgb(0, 123, 255);
+}
+.card--black {
+  background-color: rgb(34, 45, 54);
+  color: white;
+}
+.hr--white {
+  border-color: white;
+}
